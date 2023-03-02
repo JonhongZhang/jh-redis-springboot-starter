@@ -8,7 +8,7 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author huashijun
+ * @author junhong
  */
 public class RedisUtils {
 

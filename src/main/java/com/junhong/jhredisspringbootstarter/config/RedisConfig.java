@@ -30,7 +30,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author huashijun
+ * @author zhangjunhong
+ *
  */
 @Configuration
 @ConditionalOnClass(RedisUtils.class)
@@ -71,7 +72,7 @@ public class RedisConfig {
         genericObjectPoolConfig.setMaxIdle(properties.getLettuce().getPool().getMaxIdle());
         genericObjectPoolConfig.setMinIdle(properties.getLettuce().getPool().getMinIdle());
         genericObjectPoolConfig.setMaxTotal(properties.getLettuce().getPool().getMaxActive());
-        genericObjectPoolConfig.setMaxWaitMillis(properties.getLettuce().getPool().getMaxWait().toMillis());
+//        genericObjectPoolConfig.setMaxWaitMillis(properties.getLettuce().getPool().getMaxWait().toMillis());
 
         LettuceClientConfiguration clientConfig = LettucePoolingClientConfiguration.builder()
                 .commandTimeout(properties.getTimeout())
